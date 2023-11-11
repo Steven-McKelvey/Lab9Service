@@ -49,6 +49,7 @@ router.post('/players', createPlayer);
 router.delete('/players/:id', deletePlayer);
 
 router.get("playerscore/:id", readPlayerScores)
+router.get("/test", testMessage);
 
 app.use(router);
 app.listen(port, () => console.log(`Listening on port ${port}`));
@@ -125,4 +126,8 @@ function readPlayerScores(req, res, next) {
         .catch(err => {
             next(err);
         });
+}
+
+function testMessage(req, res, next) {
+    res.send('test');
 }
