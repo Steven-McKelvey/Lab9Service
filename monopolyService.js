@@ -48,7 +48,7 @@ router.put("/players/:id", updatePlayer);
 router.post('/players', createPlayer);
 router.delete('/players/:id', deletePlayer);
 
-router.get(":playerid/:gameid", readPlayerScore)
+router.get("playerscore/:id", readPlayerScores)
 
 app.use(router);
 app.listen(port, () => console.log(`Listening on port ${port}`));
@@ -117,8 +117,8 @@ function deletePlayer(req, res, next) {
         });
 }
 
-function readPlayerScore(req, res, next) {
-    db.oneOrNone('SELECT Player.name, PlayerGame.score FROM Player, PlayerGame WHERE playerID=Player.id AND Player.id = ${playerid} AND gameID = ${gameid}', req.params)
+function readPlayerScores(req, res, next) {
+    db.oneOrNone('SELECT Player.name, PlayerGame.score FROM Player, PlayerGame WHERE playerID=Player.id AND Player.id = ${playerid}', req.params)
         .then(data => {
             returnDataOr404(res, data);
         })
