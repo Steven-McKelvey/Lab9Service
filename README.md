@@ -9,7 +9,7 @@ The lab/homework is deployed here:
 
 It has the following read data route URLs:
 - <https://stevenm-calvin-cs262lab09.azurewebsites.net/> a hello message
-- <https://cs262-webservice.azurewebsites.net/players/> a list of players
+- <https://stevenm-calvin-cs262lab09.azurewebsites.net/players/> a list of players
 - <https://stevenm-calvin-cs262lab09.azurewebsites.net/players/1/> a single player with the given ID (1)
 - <https://stevenm-calvin-cs262lab09.azurewebsites.net/players/-1/> return player not found
 - <https://stevenm-calvin-cs262lab09.azurewebsites.net/blob> undefined endpoint
