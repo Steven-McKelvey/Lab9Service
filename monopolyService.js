@@ -118,7 +118,7 @@ function deletePlayer(req, res, next) {
 }
 
 function readPlayerScores(req, res, next) {
-    db.many('SELECT Player.name, PlayerGame.score FROM Player, PlayerGame WHERE playerID=Player.id AND Player.id = ${playerid}', req.params)
+    db.many('SELECT Player.name, PlayerGame.score FROM Player, PlayerGame WHERE playerID=Player.id AND Player.id = ${id}', req.params)
         .then(data => {
             returnDataOr404(res, data);
         })
