@@ -15,7 +15,7 @@ It has the following read data route URLs:
 - <https://stevenm-calvin-cs262lab09.azurewebsites.net/blob/> undefined endpoint
 
 Homework3:
-- Join Query: 'SELECT Player.name, PlayerGame.score FROM Player, PlayerGame WHERE playerID=Player.id AND Player.id = ${id}'
+- Join Query: 'SELECT PlayerGame.gameID, Player.name, PlayerGame.score FROM Player, PlayerGame WHERE playerID=Player.id AND Player.id = ${id}'
 - Function called from URL: "/playerscore/:id"
 - example: <https://stevenm-calvin-cs262lab09.azurewebsites.net/playerscore/2/>
 
