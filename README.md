@@ -12,7 +12,12 @@ It has the following read data route URLs:
 - <https://stevenm-calvin-cs262lab09.azurewebsites.net/players/> a list of players
 - <https://stevenm-calvin-cs262lab09.azurewebsites.net/players/1/> a single player with the given ID (1)
 - <https://stevenm-calvin-cs262lab09.azurewebsites.net/players/-1/> return player not found
-- <https://stevenm-calvin-cs262lab09.azurewebsites.net/blob> undefined endpoint
+- <https://stevenm-calvin-cs262lab09.azurewebsites.net/blob/> undefined endpoint
+
+Homework3:
+- Join Query: 'SELECT Player.name, PlayerGame.score FROM Player, PlayerGame WHERE playerID=Player.id AND Player.id = ${id}'
+- Function called from URL: "/playerscore/:id"
+- example: <https://stevenm-calvin-cs262lab09.azurewebsites.net/playerscore/2/>
 
 It is based on the standard Azure App Service tutorial for Node.js.
 
