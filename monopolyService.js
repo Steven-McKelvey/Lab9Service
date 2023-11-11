@@ -48,7 +48,7 @@ router.put("/players/:id", updatePlayer);
 router.post('/players', createPlayer);
 router.delete('/players/:id', deletePlayer);
 
-router.get("playerscore/:id", readPlayerScores)
+router.get("/playerscore/:id", readPlayerScores)
 router.get("/test", testMessage);
 
 app.use(router);
@@ -126,8 +126,4 @@ function readPlayerScores(req, res, next) {
         .catch(err => {
             next(err);
         });
-}
-
-function testMessage(req, res, next) {
-    res.send('test');
 }
